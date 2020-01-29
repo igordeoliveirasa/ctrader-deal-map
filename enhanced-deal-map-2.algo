@@ -269,10 +269,10 @@ namespace cAlgo
                 //deals.Where(x => x.PositionId < positionId && x.Index == closingIndex && x.Aligment == VerticalAlignment.Top).Count() + 1;
                 for (int i = 0; i <= 16; i += 2)
                 {
-                    ChartObjects.DrawText(id + "ResultBG" + i, X(i) + new string((char)9474, Math.Max(resultText.Length - (resultText.Contains(".") ? 1 : 0), 2)) + X(8) + new string('\n', y) + " ", closingIndex, MarketSeries.High[closingIndex], VerticalAlignment.Bottom, HorizontalAlignment.Center, resultColor);
+                    ChartObjects.DrawText(id + "ResultBG" + i, X(i) + new string((char)9474, Math.Max(resultText.Length - (resultText.Contains(".") ? 1 : 0), 2)) + X(8) + new string('\n', y) + " ", closingIndex, MarketSeries.Low[closingIndex], VerticalAlignment.Bottom, HorizontalAlignment.Center, resultColor);
                 }
 
-                ChartObjects.DrawText(id + "Result", resultText + X(3) + new string('\n', y) + " ", closingIndex, MarketSeries.High[closingIndex], VerticalAlignment.Bottom, HorizontalAlignment.Center, Colors.White);
+                ChartObjects.DrawText(id + "Result", resultText + X(3) + new string('\n', y) + " ", closingIndex, MarketSeries.Low[closingIndex], VerticalAlignment.Bottom, HorizontalAlignment.Center, Colors.White);
             }
         }
 
