@@ -5,7 +5,7 @@ using cAlgo.API;
 
 namespace cAlgo
 {
-    [Author("tmc", version = 1.1)]
+    [Author("tmc & Igor de Oliveira Sa - igordeoliveirasa@gmail.com", version = 1.1)]
     [Indicator("Enhanced Deal Map", IsOverlay = true, TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
     public class EnhancedDealMap : Indicator
     {
